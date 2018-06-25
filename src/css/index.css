@@ -1,0 +1,275 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+ 
+body {
+      font-family: 'Lato',sans-serif;
+      font-weight: 400;
+      line-height: 1.5em; 
+}
+ 
+header {
+      width: 100%;
+      height: 100vh;
+}
+
+.info {
+    width: 50% !important;
+    margin: 25em auto !important;
+    padding: 1em 3em 1em !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+
+.info h3 {
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #c5c5c5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #782f40;
+    line-height: 2.2em;
+    margin: 1em 0 1em !important;
+}   
+
+.info p {
+    text-indent: 20px;
+}
+
+.info #workshops {
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.info #sig {
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.info #pgc {
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.info p a {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    font-size: .8em;
+    text-decoration:none;
+    outline: 0;
+
+}
+
+.info p a:link,
+.info p a:visited,
+.info p a:active {
+    color: #782f40;
+}
+
+.info p a:hover {
+    border-bottom: 1px solid #782f40;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 6px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+.footer {
+    width: fill;
+    max-height: 200px;
+    list-style: none;
+    overflow: hidden;
+    background: #C5C5C5;
+    color: #fff;
+    padding: 1em 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+
+.footer i{
+        display: inline-block;
+        font-weight: lighter;
+}
+
+.contact {
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    white-space: nowrap;
+}
+
+.contact i {
+        color: #782f40;
+        margin-right: 4px; 
+        margin-left: 65%;
+        line-height: 1.3em;
+}
+
+.contact p {
+        line-height: 0px;
+        margin-left: 72%;
+}   
+
+.copyright {
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.social {
+    text-align: left;
+    line-height: 1.4em;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    
+}
+
+.social i {
+    margin-right: 3px;
+    margin-left: 10px;
+    line-height: 24px;
+}
+
+.social a {
+        outline: 0px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      line-height: 60px;
+}
+ 
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      overflow: hidden;
+      background: #C5C5C5;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+ 
+nav.shrink ul {
+      background: #C5C5C5;
+}
+ 
+nav ul li {
+      display: inline-block;
+      padding: 10px 25px;
+}
+ 
+nav ul li a {
+      color: #782f40;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2em;
+      font-weight: 600;
+       outline: 0px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #782f40;
+    text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    border-bottom: 1px solid #fff;
+}
+
+a.current {
+    border-bottom: 1px solid #fff;
+}
+
+.menu_icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+.social a {
+    color: #782f40;
+    text-decoration: none;
+    outline: 0;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+
+@media(max-width: 567px) {
+ 
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+    
+      nav {
+            background: #C5C5C5;
+        
+      }
+      nav ul {
+            max-height: 0px;
+            background: #C5C5C5;
+      }
+ 
+      nav.shrink ul {
+            background: #C5C5C5;
+      }
+ 
+      .showing {
+            max-height: 34em;
+      }
+ 
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+ 
+      .menu_icon {
+            display: block;
+            background: #C5C5C5;
+     }
+      
+      .footer {
+        
+      }
+ 
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACM at FSU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400|Montserrat:600,700">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu_icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                
+                <div class="logo">
+                    <img src="../img/acmlogo.png" width="150" height="150">
+                </div>
+                
+                <div class="menu">
+                    <ul>
+                        <li id="home"><a href="./index.html">Home</a></li>    
+                        <li id="about"><a href="./about.html">About</a></li>
+                        <li id="events"><a href="./events.html">Events</a></li>
+                        <li id="leadership"><a href="./leadership.html">Leadership</a></li>
+                        <li id="contact"><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="info">
+                <span id="workshops">
+                    <h3>Workshops</h3>
+                    <p>
+                        In addition to our GBMs, we frequently host workshops targeting all levels of experience. Check our events calendar on 
+                        <a href="https://www.facebook.com/ACMatFSU/">Facebook</a> 
+                        for a complete list of our events!
+                    </p>
+                </span>
+                <span id="sig">
+                    <h3>Special Interest Groups</h3>
+                    <p>
+                        In addition to regular meetings, the Open Source Software Group and the Programming Club meet weekly. 
+                        Join our
+                        <a href="https://acmatfsu.slack.com/">Slack</a> 
+                        to find out when the next meetings are.
+                    </p>
+                </span>
+                <span id="pgc">
+                    <h3>Programming Contests</h3>
+                    <p>
+                        Every Fall and Spring, we host a department wide coding competition. Come test your coding know-how by solving 
+                        challenging questions in the language of your choice.
+                    </p>
+                </span>
+            </div>
+        </header>
+    </div>
+
+     
+    <div class="footer">
+        <div class="contact">
+            <i id="email" class="fas fa-envelope fa-lg"></i>    hello@acmatfsu.org<br>
+            <i class="fas fa-map fa-lg"></i> 1017 Academic Way<p>Tallahassee, FL</p> 
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright © 2018-present ACM at FSU</p>
+        </div>
+        
+        <div class="social">
+            <a href="https://www.facebook.com/ACMatFSU/">
+            <i class="fab fa-facebook-square fa-lg"></i></a> facebook<br>
+            <a href="https://www.github.com/FSU-ACM/"><i class="fab fa-github fa-lg"></i></a> github<br>
+            <a href="https://acmatfsu.slack.com/">
+            <i class="fab fa-slack fa-lg"></i></a> slack<br>
+            <a href="https://instagram.com/"><i class="fab fa-instagram fa-lg"></i></a> instagram<br>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+        //add 'showing' class when menu icon is clicked
+        $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+                });
+        });
+
+        // Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                $('nav').addClass('shrink');
+            }
+
+            else {
+                $('nav').removeClass('shrink');
+            }
+        })
+    </script>
+   
+    <script type="text/javascript">
+    // add 'current' class for underlining current page in nav bar 
+    $(function() 
+    {
+        $('a').each(function() 
+        {
+            if ($(this).prop('href') == window.location.href)
+            {
+               $(this).addClass('current');
+            }
+        });
+    });  
+    </script>
+
+</body>
+</html>
