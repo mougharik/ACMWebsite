@@ -10,7 +10,9 @@
      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
+
 <body>
+    <!-- wrapper class around navigation bar and introductory content --!>
     <div class="wrapper">
         <header>
             <nav>
@@ -19,10 +21,10 @@
                 </div>
                 
                 <div class="logo">
-                    <img src="../img/acmlogo.png" width="150" height="150">
+                    <img id="size" src="../img/acmlogo.png">
                 </div>
                 
-                <div class="menu">
+                <div class="menu_options">
                     <ul>
                         <li id="home"><a href="./index.html">Home</a></li>    
                         <li id="about"><a href="./about.html">About</a></li>
@@ -32,81 +34,57 @@
                     </ul>
                 </div>
             </nav>
-
-            <div class="info">
-                <span id="workshops">
-                    <h3>Workshops</h3>
-                    <p>
-                        In addition to our GBMs, we frequently host workshops targeting all levels of experience. Check our events calendar on 
-                        <a href="https://www.facebook.com/ACMatFSU/">Facebook</a> 
-                        for a complete list of our events!
-                    </p>
-                </span>
-                <span id="sig">
-                    <h3>Special Interest Groups</h3>
-                    <p>
-                        In addition to regular meetings, the Open Source Software Group and the Programming Club meet weekly. 
-                        Join our
-                        <a href="https://acmatfsu.slack.com/">Slack</a> 
-                        to find out when the next meetings are.
-                    </p>
-                </span>
-                <span id="pgc">
-                    <h3>Programming Contests</h3>
-                    <p>
-                        Every Fall and Spring, we host a department wide coding competition. Come test your coding know-how by solving 
-                        challenging questions in the language of your choice.
-                    </p>
-                </span>
-            </div>
         </header>
+            
+        <div class="content">
+            <span id="workshops">
+                <h3>Workshops</h3>
+                    <p>
+                    In addition to our GBMs, we frequently host workshops targeting all levels of experience. Check our events calendar on 
+                    <a href="https://www.facebook.com/ACMatFSU/">Facebook</a> 
+                    for a complete list of our events!
+                    </p>
+            </span>
+            <span id="sig">
+                <h3>Special Interest Groups</h3>
+                    <p>
+                    In addition to regular meetings, the Open Source Software Group and the Programming Club meet weekly. 
+                    Join our
+                    <a href="https://acmatfsu.slack.com/">Slack</a> 
+                    to find out when the next meetings are.
+                    </p>
+            </span>
+            <span id="pgc">
+                <h3>Programming Contests</h3>
+                    <p>
+                    Every Fall and Spring, we host a department wide coding competition. Come test your coding know-how by solving 
+                    challenging questions in the language of your choice.
+                    </p>
+            </span>
+        </div>
     </div>
 
-     
-    <div class="footer">
-        <div class="contact">
-            <i id="email" class="fas fa-envelope fa-lg"></i>    hello@acmatfsu.org<br>
-            <i class="fas fa-map fa-lg"></i> 1017 Academic Way<p>Tallahassee, FL</p> 
-        </div>
-        
-        <div class="copyright">
-            <p>Copyright © 2018-present ACM at FSU</p>
-        </div>
-        
-        <div class="social">
-            <a href="https://www.facebook.com/ACMatFSU/">
-            <i class="fab fa-facebook-square fa-lg"></i></a> facebook<br>
-            <a href="https://www.github.com/FSU-ACM/"><i class="fab fa-github fa-lg"></i></a> github<br>
-            <a href="https://acmatfsu.slack.com/">
-            <i class="fab fa-slack fa-lg"></i></a> slack<br>
-            <a href="https://instagram.com/"><i class="fab fa-instagram fa-lg"></i></a> instagram<br>
-        </div>
-    </div>
-    
-
+    <!-- drop down menu when screensize becomes too small--!>
     <script type="text/javascript">
-        //add 'showing' class when menu icon is clicked
         $(document).ready(function() {
-            $(".menu-icon").on("click", function() {
+            $(".menu_icon").on("click", function() {
                 $("nav ul").toggleClass("showing");
-                });
+            });
         });
 
-        // Scrolling Effect
-
         $(window).on("scroll", function() {
-            if($(window).scrollTop()) {
+            if($(window).scrollTop() > 20) {
                 $('nav').addClass('shrink');
             }
 
             else {
                 $('nav').removeClass('shrink');
             }
-        })
+        });
     </script>
    
+    <!-- adds a class called 'current' that is stylized in css file to underline current page --!>
     <script type="text/javascript">
-    // add 'current' class for underlining current page in nav bar 
     $(function() 
     {
         $('a').each(function() 
@@ -120,4 +98,36 @@
     </script>
 
 </body>
+<!-- beginning of footer --!> 
+<footer>
+    <div class="flexwrap">
+        <span id="mail">
+            <i id="email" class="fas fa-envelope fa-lg">
+                <small>hello@acmatfsu.org</small>
+            </i><br>
+            <i id="map" class="fas fa-map fa-lg">
+                <small>1017 Academic Way</small><br><small id="location">Tallahassee, FL</small>
+            </i> 
+        </span>
+        
+        <span id="copyright">
+            <p>Copyright © 2018-Present ACM at FSU</p>
+        </span>
+        
+        <span id="social">
+            <a href="https://www.facebook.com/ACMatFSU/">
+                <i class="fab fa-facebook-square fa-lg"></i></a><small>facebook</small>
+                <br>
+            <a href="https://www.github.com/FSU-ACM/">
+                <i class="fab fa-github fa-lg"></i></a><small>github</small>
+                <br>
+            <a href="https://acmatfsu.slack.com/">
+                <i class="fab fa-slack fa-lg"></i></a><small>slack</small>
+                <br>
+            <a href="https://instagram.com/">
+                <i class="fab fa-instagram fa-lg"></i></a><small>instagram</small>
+                <br>
+        </span>
+    </div>
+</footer>
 </html>

@@ -1,198 +1,79 @@
-html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
+html {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height:100%;
 }
- 
+
+body,footer {
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+    line-height: 1.5em; 
+}
+
 body {
-      font-family: 'Lato',sans-serif;
-      font-weight: 400;
-      line-height: 1.5em; 
+    margin: 0 0 8em;
 }
  
 header {
-      width: 100%;
-      height: 100vh;
+    width: 100vw;
+    height: 22vh;
 }
 
-.info {
-    width: 50% !important;
-    margin: 25em auto !important;
-    padding: 1em 3em 1em !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    border-top: 1px solid #C5C5C5;
-    border-bottom: 1px solid #C5C5C5;
+.shrink,
+.shrink ul,
+.shrink > .logo > img#size {
+    transition: all 0.38s ease-in;
 }
 
-
-.info h3 {
-    text-align: center;
-    display: block;
-    border-bottom: 1px solid #c5c5c5;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #782f40;
-    line-height: 2.2em;
-    margin: 1em 0 1em !important;
+.shrink { 
+    height: 3.5em; 
 }   
-
-.info p {
-    text-indent: 20px;
+   
+.shrink ul {
+    line-height: 4em;
+    font-size: 0.7em;
 }
 
-.info #workshops {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-}
-
-.info #sig {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-}
-
-.info #pgc {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-}
-
-.info p a {
-    font-family: 'Monserrat', sans-serif;
-    font-weight: 600;
-    font-size: .8em;
-    text-decoration:none;
-    outline: 0;
-
-}
-
-.info p a:link,
-.info p a:visited,
-.info p a:active {
-    color: #782f40;
-}
-
-.info p a:hover {
-    border-bottom: 1px solid #782f40;
-}
-
-.logo {
-      line-height: 60px;
-      position: fixed;
-      float: left;
-      margin: 6px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
-}
-
-.footer {
-    width: fill;
-    max-height: 200px;
-    list-style: none;
-    overflow: hidden;
-    background: #C5C5C5;
-    color: #fff;
-    padding: 1em 0;
-    transition: 1s;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center; 
-}
-
-
-.footer i{
-        display: inline-block;
-        font-weight: lighter;
-}
-
-.contact {
-    text-align: left;
-    flex-grow: 1;
-    flex-basis: 25%;
-    max-width: 25%;
-    white-space: nowrap;
-}
-
-.contact i {
-        color: #782f40;
-        margin-right: 4px; 
-        margin-left: 65%;
-        line-height: 1.3em;
-}
-
-.contact p {
-        line-height: 0px;
-        margin-left: 72%;
-}   
-
-.copyright {
-    text-align: center;
-    flex-grow: 1;
-    flex-basis: 50%;
-    max-width: 50%;
-}
-
-.social {
-    text-align: left;
-    line-height: 1.4em;
-    flex-grow: 1;
-    flex-basis: 25%;
-    max-width: 25%;
-    
-}
-
-.social i {
-    margin-right: 3px;
-    margin-left: 10px;
-    line-height: 24px;
-}
-
-.social a {
-        outline: 0px;
+.shrink > .logo > img#size {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: -0.3em;
 }
 
 nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      line-height: 60px;
+    position: fixed;
+    width: 100vw;
+    height: 5.25em;
+    top: 0;
+    background-color: #C5C5C5;
 }
  
 nav ul {
-      line-height: 60px;
-      list-style: none;
-      overflow: hidden;
-      background: #C5C5C5;
-      color: #fff;
-      padding: 0;
-      text-align: right;
-      margin: 0;
-      padding-right: 40px;
-      transition: 1s;
-}
- 
-nav.shrink ul {
-      background: #C5C5C5;
+    line-height: 4.5em;
+    list-style: none;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+    padding: 0; 
+    margin: 0;
+    text-align: right;
+    padding-right: 1%;
 }
  
 nav ul li {
-      display: inline-block;
-      padding: 10px 25px;
+    display: inline-block;
+    padding: .5em 1em 1em;
 }
  
 nav ul li a {
-      color: #782f40;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.2em;
-      font-weight: 600;
-       outline: 0px;
+    color: #782f40;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    outline: 0px;
 }
 
 nav ul li a:link, nav ul li a:visited {
@@ -209,67 +90,294 @@ a.current {
 }
 
 .menu_icon {
-      line-height: 60px;
-      width: 100%;
-      background: #000;
-      text-align: right;
-      box-sizing: border-box;
-      padding: 15px 24px;
-      cursor: pointer;
-      color: #fff;
-      display: none;
+    cursor: pointer;
+    color: #782f40;
+    display: none;
 }
 
-.social a {
+.logo {
+    position: fixed;
+    float: left;
+    margin: .54em 2em 0em;
+}
+
+#size {
+    width: 150px;
+    height: 150px;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.content {
+    width: 55em;
+    margin: 6em auto 15em;
+    padding: 1em 3em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+
+.content h3 {
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #c5c5c5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #782f40;
+    line-height: 2.2em;
+    margin: 1em 0 1em !important;
+}   
+
+.content p {
+    text-indent: 20px;
+}
+
+.content #workshops {
+    margin: 0em 1em 0em;
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.content #sig {
+    margin: 0em 1em 0em;
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.content #pgc {
+    margin: 0em 1em 0em;
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.content p a {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    font-size: .8em;
+    text-decoration:none;
+    outline: 0;
+
+}
+
+.content p a:link,
+.content p a:visited,
+.content p a:active {
+    color: #782f40;
+}
+
+.content p a:hover {
+    border-bottom: 1px solid #782f40;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 8em;
+    margin: 0;
+    background: #C5C5C5;
+    color: #fff;
+}
+
+.flexwrap {
+    padding: .5em 1em; 
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly; 
+    flex-basis: 100%;
+    align-items: center;
+    
+}
+
+#mail {
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    white-space: nowrap;
+}
+
+#mail i {
+    display: inline-block;
+    font-weight: lighter;
+    color: #782f40;
+    margin-right: 15%; 
+    margin-left: 46%;
+}
+
+#mail small {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    padding: 0em .4em 0em;
+    line-height: 1.6em;
+}   
+
+
+#mail small#location {   
+    margin-left: 1.7em; 
+}
+
+
+#copyright {
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+#social {
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    
+}
+
+#social small {
+    font-size: 1.05em;
+    color: #fff;
+    padding: 0em .4em 0em;
+}
+
+#social i {
+    margin-right: 0;
+    margin-left: 10%;
+    line-height: 1.3em;
+}
+
+#social a {
+        outline: 0px;
+}
+
+#social a {
     color: #782f40;
     text-decoration: none;
     outline: 0;
 }
 
-.social a:hover {
+#social a:hover {
     color: #fff;
 }
 
 
-@media(max-width: 567px) {
- 
-      .logo {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-      }
+@media(max-width: 990px) {
     
-      nav {
-            background: #C5C5C5;
-        
-      }
-      nav ul {
-            max-height: 0px;
-            background: #C5C5C5;
-      }
+    header {
+        margin: 0em;
+
+    }
+     
+    .logo {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+    }
+   
+    nav ul {
+        max-height: 0;
+    }
  
-      nav.shrink ul {
-            background: #C5C5C5;
-      }
+    .shrink,
+    .shrink > .logo > img#size,
+    .shrink > .menu_icon,
+    .shrink > .menu_options > .showing {
+        transition: all 0.3s ease-in;
+    }
+
+    .shrink { 
+        height: 3.5em; 
+    }   
+    
+    .shrink > .logo > img#size {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        top: -0.3em;
+    }
+    
+    .shrink > .menu_icon {
+        top: .8em;
+    }
+
+    .shrink > .menu_options > .showing {
+        top: 4.98em;
+    }
+
+    .showing {
+        background: #782f40;
+        max-height: 100vh;
+        position: relative;
+        top: 5.14em;
+        border-top: 2px solid white;
+        transition: all .38s ease-in;
+    }
  
-      .showing {
-            max-height: 34em;
-      }
- 
-      nav ul li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-      }
- 
-      .menu_icon {
-            display: block;
-            background: #C5C5C5;
-     }
-      
-      .footer {
-        
-      }
- 
+    nav ul li {
+        float: right;
+        box-sizing: border-box;
+        width: 100vw;
+        margin: 1.8em 0em 0em; 
+        padding: 0.1em 1.5em 0em;
+        text-align: right;
+        border-bottom: 1px solid white;
+    }
+
+    nav ul li,
+    nav ul li a:link,
+    nav ul li a:visited  {
+        color: #fff;
+        text-decoration: none;
+
+    }
+
+    .menu_icon {
+        position: absolute;
+        display: block;
+        background-color: transparent;
+        cursor: pointer;
+        right: 2em;
+        top: 1.5em;
+    }
+
+    .content {
+        width: 100vw;
+        margin: auto 0;
+        padding: 0em 0em 5em !important; 
+        flex-direction: column;
+        align-items: center;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+    }
+    
+    .content #workshops,
+    .content #sig,
+    .content #pgc {
+        flex-grow: 1;
+        flex-basis: 30%;
+        max-width: 70vw;
+    }
+
+     #copyright {
+        max-width: 70vw; 
+    }
+
+    #mail {
+        display: none;
+
+    }
+
+    #social {
+        display: none;
+    
+    }
 }
